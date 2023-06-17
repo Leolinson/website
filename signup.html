@@ -16,7 +16,7 @@
     <div class="wrapper">
         <h1>Sign Up</h1>
         <p>By Signing up you will recieve Workout recommendation from our proffesionals by email</p>
-        <form onsubmit="sendEmail(); reset(); return flase;">
+        <form action="https://formsubmit.co/iamleolinson@email.com" method="POST" />
             <label for="firstname">First Name</label>
             <input type="text" id="firstname"  placeholder="Enter first Name">
             
@@ -34,36 +34,16 @@
          
             <label for="dob">Date of Birth</label>
             <input type="date" id="dob"  placeholder="enter your DOB">
-         
+            
+            <button type="submit">SIGN UP</button>
         </form>
-        <div class="terms">
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox">I agree to these terms and conditions</label>
-                           
-        </div>
-        <button type="submit">SIGN UP</button>
+        
+        
         
     </div>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    
-    <script>
-             function sendEmail()
-        {
-            Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-        }
+   
 
-    </script>
 
 
 </body>

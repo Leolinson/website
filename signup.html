@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Beyond Limits Fitness</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <p>By Signing up you will recieve Workout recommendation from our proffesionals by email</p>
+        <form onsubmit="sendEmail(); reset(); return flase;">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname"  placeholder="Enter first Name">
+            
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname"  placeholder="Enter last Name">
+
+            <label for="age">Age</label>
+            <input type="number" id="age"  placeholder="enter your age">
+            
+            <label for="email">Email</label>
+            <input type="text" id="email"  placeholder="enter your email ID">
+        
+            <label for="gender">Gender</label>
+            <input type="text" id="email"  placeholder="enter your Gender">
+         
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob"  placeholder="enter your DOB">
+         
+        </form>
+        <div class="terms">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">I agree to these terms and conditions</label>
+                           
+        </div>
+        <button type="submit">SIGN UP</button>
+        
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+    <script>
+             function sendEmail()
+        {
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+        }
+
+    </script>
+
+
+</body>
+</html>

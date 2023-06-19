@@ -153,21 +153,39 @@ nav .fa
 
 @media(max-width:700px)
 {
+    .header img
+    {
+     width: 100px;
+    }
     .text-box h1
     {
-        font-size: 50px;
+        font-size: 20px;
         padding-left: 30px;
+        position: absolute;
+        padding-top: 0px;
     }
+    .text-box p 
+    {
+        font-size: 10px;
+        padding-top: 130px;
+    }
+
     .nav-links ul li
     {
     display:block;
     font-size: 12px;
+    }
+    .nav-links
+    {
+        padding-bottom: 0px;
     }
     
     .row
     {
         flex-direction: column;
     }
+
+    
 }
 
 
@@ -654,4 +672,20 @@ text-align: center;
 {
     text-decoration: none;
     color: black;
+}
+
+
+@media(max-width:700px)
+{
+    .wrapper
+    {
+        width: 300px;
+        position: absolute;
+    }
+
+    .wrapper button
+    {
+        position:relative;
+        padding-left:px;
+    }
 }
